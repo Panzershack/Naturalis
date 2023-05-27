@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naturalis</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<body>
+  <nav>
+    <ul>
+      <li><a href="#title">Home</a></li>
+      <li><a href="#user-section">Buy</a></li>
+      <li><a href="#seller-section">Sell</a></li>
+      <li><a href="#accessories-section">Accessories</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#about-us">About us</a></li>
+    </ul>
+  </nav>
+  <section id="title">
+    <div class="title-text">
+      <span class="title-line">Your one-stop-shop</span>
+      <span class="title-line">for everything green</span>
+      <button class="btn1">SHOP NOW</button>
+    </div>
+
+  </section>
+  <section id="content">
+    <div class="content-text">
+      <div class="left">
+        <p class="head">Find Your Green Inspiration<p>
+      </div>
+      <div class="right">
+        <p class="text1">"Plants are more than just decorations - they're living, breathing organisms that bring life to any space.</p>
+        <p class="text2">At Naturalis , we're passionate about helping you find the perfect plants for your home or office, and providing the resources you need to care for them."</p>
+      </div>
+    </div>    
+  </section>
+  <section id="user-section">
+    <div class="left">
+      
+    </div>
+    <div class="right">
+      <p class="text1">Got a green thumb? We got you</p>
+      <p class="text2">Shop for indoor and outdoor plants and accessories</p>
+      <button class="btn2">BUY NOW</button>
+
+    </div>
+
+  </section>
+  <section id="seller-section">
+    <div class="left">
+      <p class="text1">Got a Jungle of Plants to Sell?</p>
+      <p class="text2">Join Naturalis and Reach a Wider Audience</p>
+      <button class="btn2">SELL WITH US</button>
+    </div>
+    <div class="right">
+
+    </div>
+
+  </section>
+  <section id="accessories-section">
+    <div class="left">
+
+    </div>
+    <div class="right">
+      <p class="text1">Accessories Collection</p>
+      <p class="text2">Grow your garden with ease and keep it thriving with our top-quality gardening tools and maintenance essentials</p>
+      <button class="btn2">EXPLORE</button>
+
+    </div>
+
+  </section>
+  <section id="testimonials">
+    <h1>What our customers say about us</h1>
+    <div class="test1">
+      <img src="images/test1.jpg">
+      <p class="description">"I love my new plants from Naturalis! The website was easy to use, checkout was a breeze, and my plants arrived in great condition. Highly recommend!"</p>
+      <p class="head">Riley Simon (27)</p>
+    </div>
+
+    <div class="test2">
+      <img src="images/test2.jpg">
+      <p class="description">"Naturalis is perfect for adding greenery to your workspace. The ordering process was easy and my plants arrived in perfect condition. Highly recommend!"</p>
+      <p class="head">Dwight Stiffler (31)</p>
+    </div>
+
+    <div class="test3">
+      <img src="images/test3.jpg">
+      <p class="description">"Naturalis is a game-changer! Great selection, easy ordering, and quality plants. Highly recommend!"</p>
+      <p class="head">Zelda Link (21)</p>
+    </div>
+
+  </section>
+  <section id="about-us">
+    <div class="left">
+      <p><a href="#" >Instagram</a><br><a href="#" >Facebook</a><br><a href="#" >Twitter</a></p>
+      <br>
+      <p class="addr">423 Albans Street,<br>New York</p>
+    </div>
+    <div class="right">
+      <p>(123) 456 7890<br>hello@naturalis.ny</p>
+    </div>
+  </section>
+  <section id="why-us">
+    <div class="left">
+      
+    </div>
+    <div class="right">
+      <div class="content">
+      <p class="text1">Why people love to shop at Naturalis</p>
+      <ul class="text2">
+        <li>Variety of Indoor, Outdoor Plants</li>
+        <li>Essential tools for your own Garden of Eden.</li>
+        <li>Get 24/7 customer support and on demands plant care guidance.</li>
+        <li>We support contactless payment and cash on delivery.</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

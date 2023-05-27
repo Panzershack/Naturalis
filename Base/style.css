@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn1 {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #edf1d6;
+  font-size: 15px;
+  background: #609966;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn1:hover {
+  background: #edf1d6;
+  color: #609966;
+  text-decoration: none;
+}
+
+.btn2 {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #609966;
+  font-size: 15px;
+  background: #edf1d6;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn2:hover {
+  background: #609966;
+  color: #edf1d6;
+  text-decoration: none;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #edf1d6;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  display: inline-block;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav li a:hover {
+  background-color: #609966;
+  color: #edf1d6;
+}
+
+/* TITLE FROM HERE */
+
+#title {
+  background-image: url(images/title.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.title-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #f6f6e9;
+  font-size: 4.5rem; /* Use rem instead of px */
+  text-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  line-height: 1.2; /* Increase line height for readability */
+}
+
+.title-line {
+  display: block;
+}
+
+/* CONTENT FROM HERE  */
+
+#content {
+  position: relative; /* Add relative positioning to allow absolute positioning */
+  background-color: #7d9b76;
+  color: #272727;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.content-text .left {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-text .left .head {
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-left: 30px;
+  margin-right: 50px;
+  max-width: 700px;
+}
+
+.content-text .right {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.content-text .right .text1 {
+  font-size: 2rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.content-text .right .text2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0;
+  text-align: left;
+}
+
+/* USER SECTION */
+
+#user-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+#user-section .left {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/1.jpg);
+  background-size: cover;
+}
+
+#user-section .right {
+  flex: 1;
+  padding: 50px;
+  width: 50%;
+  height: 100%;
+  background-color: #609966;
+  color: #f6f6e9;
+}
+
+#user-section .right .text1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin: 30% auto 0;
+  max-width: 500px;
+}
+
+#user-section .right .text2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 2% auto 2%;
+}
+
+/* SELLER SECTION */
+
+#seller-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+#seller-section .left {
+  flex: 1;
+  padding: 50px;
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  color: #f6f6e9;
+}
+
+#seller-section .left .text1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin: 30% auto 0;
+  max-width: 500px;
+}
+
+#seller-section .left .text2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 2% auto 2%;
+}
+
+#seller-section .right {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/2.jpg);
+  background-size: cover;
+}
+
+/* ACCESSORIES SECTION */
+
+#accessories-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+#accessories-section .left {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/3.jpg);
+  background-size: cover;
+}
+
+#accessories-section .right {
+  flex: 1;
+  padding: 50px;
+  width: 50%;
+  height: 100%;
+  background-color: #457d58;
+  color: #f6f6e9;
+}
+
+#accessories-section .right .text1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin: 30% auto 0;
+  max-width: 500px;
+}
+
+#accessories-section .right .text2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 2% auto 2%;
+}
+
+/* TESTIMONIAL SECTION */
+
+#testimonials {
+  position: relative; /* Add relative positioning to allow absolute positioning */
+  background-color: #272727;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  color: #f6f6e9;
+}
+
+#testimonials h1 {
+  position: absolute;
+  height: min-content;
+  top: 50px;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-top: 0%;
+}
+
+#testimonials div {
+  height: 50%;
+  width: min-content;
+  align-self: center;
+  margin-bottom: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#testimonials img {
+  height: 400px;
+  width: auto;
+}
+
+#testimonials p {
+  max-width: fit-content;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+}
+
+#testimonials .head {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.5 rem;
+  max-width: none;
+}
+
+/* ABOUT US SECTION */
+
+#about-us {
+  background-image: url(images/about-us.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 3rem;
+}
+
+#about-us .left {
+  max-width: fit-content;
+  position: relative;
+  top: 250px;
+  left: 20%;
+}
+
+#about-us .left .addr {
+  margin-top: 0%;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#about-us .right {
+  max-width: fit-content;
+  position: relative;
+  bottom: 70px;
+  left: 60%;
+}
+
+/* WHY US SECTION */
+#why-us {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+#why-us .left {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/why-us.jpg);
+  background-size: cover;
+}
+
+#why-us .right {
+  flex: 1;
+  padding: 50px;
+  width: 50%;
+  height: 100%;
+  background-color: #457d58;
+  color: #f6f6e9;
+}
+
+#why-us .right .content {
+  position: relative;
+  top: 20%;
+  line-height: 1.2rem;
+  font-size: 1.5rem;
+  max-width: fit-content;
+}
+
+#why-us .right .content .text1 {
+  font-family: "Playfair Display", serif;
+  line-height: 3.5rem;
+  font-size: 3rem;
+  margin-bottom: 80px;
+}
+
+#why-us .right .content .text2 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
