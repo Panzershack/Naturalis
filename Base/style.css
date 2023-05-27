@@ -14,43 +14,51 @@ a {
 }
 
 .btn1 {
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
+  background-color: #edf1d6;
+  color: #609966;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: #edf1d6;
   font-size: 15px;
-  background: #609966;
-  padding: 10px 20px 10px 20px;
+  font-weight: bolder;
+  font-style: normal;
   text-decoration: none;
-  transition: 0.3s;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
 .btn1:hover {
-  background: #edf1d6;
-  color: #609966;
-  text-decoration: none;
+  background-color: #609966;
+  color: #edf1d6;
 }
 
 .btn2 {
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
+  background-color: #609966;
+  color: #edf1d6;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: #609966;
   font-size: 15px;
-  background: #edf1d6;
-  padding: 10px 20px 10px 20px;
+  font-weight: bolder;
+  font-style: normal;
   text-decoration: none;
-  transition: 0.3s;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
 .btn2:hover {
-  background: #609966;
+  background-color: #edf1d6;
+  color: #609966;
+}
+
+#user-section .btn2 {
+  background-color: #457d58;
   color: #edf1d6;
-  text-decoration: none;
+}
+
+#user-section .btn2:hover {
+  background-color: #edf1d6;
+  color: #457d58;
 }
 
 /* NAVIGATION BAR */
@@ -305,7 +313,7 @@ nav li a:hover {
 /* TESTIMONIAL SECTION */
 
 #testimonials {
-  position: relative; /* Add relative positioning to allow absolute positioning */
+  position: relative;
   background-color: #272727;
   display: flex;
   flex: row;
@@ -316,7 +324,7 @@ nav li a:hover {
 #testimonials h1 {
   position: absolute;
   height: min-content;
-  top: 50px;
+  top: 70px;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   margin-top: 0%;
@@ -340,7 +348,7 @@ nav li a:hover {
   max-width: fit-content;
   text-align: center;
   font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #testimonials .head {
