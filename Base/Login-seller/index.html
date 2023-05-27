@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login or Signup</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="cover">
@@ -18,7 +23,8 @@
             Signup
           </button>
         </div>
-        <div id="login" class="form-content active">
+        <h2 class="form-text">List Your Products</h2>
+        <form id="login" class="form-content active">
           <input
             type="text"
             class="inputs"
@@ -31,9 +37,13 @@
             placeholder="Password"
             required
           /><br />
+          <label for="remember-me" class="checkbox-label">
+            <input type="checkbox" id="remember-me" class="checkbox-input" />
+            Remember me </label
+          ><br />
           <button type="submit" class="submit-btn">Log in</button>
-        </div>
-        <div id="register" class="form-content">
+        </form>
+        <form id="register" class="form-content">
           <input
             type="text"
             class="inputs"
@@ -52,8 +62,12 @@
             placeholder="Re-Enter Password"
             required
           /><br />
+          <label for="terms" class="checkbox-label">
+            <input type="checkbox" id="terms" class="checkbox-input" />
+            I Agree to the Terms and Conditions </label
+          ><br />
           <button type="submit" class="submit-btn">Sign up</button>
-        </div>
+        </form>
       </div>
     </div>
     <script>
@@ -72,6 +86,10 @@
         y.style.left = "450px";
         z.style.left = "0";
       }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".toggler-btn").click();
+      });
     </script>
   </body>
 </html>

@@ -23,7 +23,7 @@
     <div class="title-text">
       <span class="title-line">Your one-stop-shop</span>
       <span class="title-line">for everything green</span>
-      <button class="btn2">SHOP NOW</button>
+      <button class="btn2" onclick="redirectToUser()">SHOP NOW</button>
     </div>
 
   </section>
@@ -45,7 +45,7 @@
     <div class="right">
       <p class="text1">Got a green thumb? We got you</p>
       <p class="text2">Shop for indoor and outdoor plants and accessories</p>
-      <button class="btn2">BUY NOW</button>
+      <button class="btn2" onclick="redirectToUser()">BUY NOW</button>
 
     </div>
 
@@ -54,7 +54,7 @@
     <div class="left">
       <p class="text1">Got a Jungle of Plants to Sell?</p>
       <p class="text2">Join Naturalis and Reach a Wider Audience</p>
-      <button class="btn2">SELL WITH US</button>
+      <button class="btn2" onclick="redirectToSeller()">SELL WITH US</button>
     </div>
     <div class="right">
 
@@ -130,6 +130,12 @@
         });
       });
     });
+    function redirectToUser() {
+        window.location.href = "Login-user/index.html";
+      }
+    function redirectToSeller() {
+       window.location.href = "Login-seller/index.html";
+    }
   </script>
 </body>
 </html>
