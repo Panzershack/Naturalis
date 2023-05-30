@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Naturalis</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#title">Indoor Plants</a></li>
+        <li><a href="#content">Outdoor Plants</a></li>
+        <li><a href="#user-section">Accessories</a></li>
+        <li><a href="#seller-section">Home</a></li>
+        <li><a href="#accessories-section">My Account</a></li>
+      </ul>
+    </nav>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 1</p>
+      <h3 class="price">12.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 2</p>
+      <h3 class="price">10.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 3</p>
+      <h3 class="price">15.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 4</p>
+      <h3 class="price">12.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 5</p>
+      <h3 class="price">11.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Indoor Item 6</p>
+      <h3 class="price">8.00$</h3>
+    </div>
+
+    <!-- Repeat the above divs for additional products -->
+
+    <script>
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

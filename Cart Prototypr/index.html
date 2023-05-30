@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Naturalis</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#title">Indoor Plants</a></li>
+        <li><a href="#content">Outdoor Plants</a></li>
+        <li><a href="#user-section">Accessories</a></li>
+        <li><a href="#seller-section">Home</a></li>
+        <li><a href="#accessories-section">My Account</a></li>
+        <li id="expand-cart-item">
+          <a href="#" id="expand-cart-link">Expand Cart</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="cart" class="cart">
+      <div class="cart-header">
+        <h2>Cart</h2>
+        <a href="#" class="close-cart">
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
+      <div class="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+      <div class="cart-footer">
+        <h3>Total: <span id="cart-total">0.00$</span></h3>
+        <a href="#" class="buy-now-button">Buy Now</a>
+      </div>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image1.jpg" alt="Product 1" />
+      <p>Accessory 1</p>
+      <h3 class="price">12.00$</h3>
+    </div>
+    <div class="itembox">
+      <div class="buttons">
+        <a href="#" class="add-to-cart-button">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="details-button">
+          <i class="fa fa-info-circle"></i>
+        </a>
+      </div>
+      <img src="image2.jpg" alt="Product 2" />
+      <p>Accessory 2</p>
+      <h3 class="price">15.00$</h3>
+    </div>
+    <!-- More itembox elements -->
+    <script>
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+      const cartItemsContainer = document.querySelector(".cart-items");
+      const cartTotalElement = document.getElementById("cart-total");
+      const closeCartButton = document.querySelector(".close-cart");
+      const cart = document.getElementById("cart");
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener("click", addToCart);
+      });
+
+      closeCartButton.addEventListener("click", toggleCart);
+
+      function addToCart(e) {
+        const itemBox = e.target.closest(".itembox");
+        const itemName = itemBox.querySelector("p").textContent;
+        const itemPrice = itemBox.querySelector(".price").textContent;
+
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+        <img src="image1.jpg" alt="${itemName}" />
+        <div>
+          <h4>${itemName}</h4>
+          <p>${itemPrice}</p>
+        </div>
+        <div>
+          <input type="number" min="1" value="1" class="quantity-input">
+          <button class="remove-button">Remove</button>
+        </div>
+      `;
+        cartItemsContainer.appendChild(cartItem);
+
+        const removeButtons = document.querySelectorAll(".remove-button");
+        const quantityInputs = document.querySelectorAll(".quantity-input");
+
+        removeButtons.forEach((button) => {
+          button.addEventListener("click", removeCartItem);
+        });
+
+        quantityInputs.forEach((input) => {
+          input.addEventListener("change", updateCartItemTotal);
+        });
+
+        updateCartTotal();
+        toggleCart(true);
+      }
+
+      function removeCartItem(e) {
+        const button = e.target;
+        button.closest(".cart-item").remove();
+        updateCartTotal();
+        if (cartItemsContainer.children.length === 0) {
+          toggleCart(false);
+        }
+      }
+
+      function updateCartItemTotal(e) {
+        const input = e.target;
+        const quantity = input.value;
+        const priceElement = input.closest(".cart-item").querySelector("p");
+        const price = parseFloat(priceElement.textContent.replace("$", ""));
+        const total = quantity * price;
+        priceElement.textContent = total.toFixed(2) + "$";
+        updateCartTotal();
+      }
+
+      function updateCartTotal() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        let total = 0;
+        cartItems.forEach((cartItem) => {
+          const priceElement = cartItem.querySelector("p");
+          const price = parseFloat(priceElement.textContent.replace("$", ""));
+          total += price;
+        });
+        cartTotalElement.textContent = total.toFixed(2) + "$";
+      }
+
+      function toggleCart(expand) {
+        if (expand) {
+          cart.classList.add("cart-active");
+        } else {
+          cart.classList.remove("cart-active");
+        }
+      }
+
+      cart.addEventListener("mouseenter", function () {
+        if (cartItemsContainer.children.length > 0) {
+          toggleCart(true);
+        }
+      });
+
+      cart.addEventListener("mouseleave", function () {
+        if (cartItemsContainer.children.length > 0) {
+          toggleCart(false);
+        }
+      });
+
+      const expandCartLink = document.getElementById("expand-cart-link");
+      const expandCartItem = document.getElementById("expand-cart-item");
+
+      expandCartLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleCart(true);
+      });
+
+      expandCartItem.addEventListener("mouseenter", function () {
+        toggleCart(true);
+      });
+
+      expandCartItem.addEventListener("mouseleave", function () {
+        toggleCart(false);
+      });
+    </script>
+  </body>
+</html>
