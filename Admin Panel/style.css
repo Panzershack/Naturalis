@@ -1,0 +1,109 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #edf1d6;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+      rgba(69, 128, 88, 0.8),
+      rgba(69, 128, 88, 0.8)
+    ),
+    url(background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.btn1 {
+  background-color: #edf1d6;
+  color: #7d9b76;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.btn1:hover {
+  background-color: #7d9b76;
+  color: #edf1d6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #272727;
+  border-radius: 20px;
+}
+
+.dashboard {
+  background-color: #609966;
+  border-radius: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+}
+
+.add-product-form {
+  margin-bottom: 20px;
+}
+
+.add-product-form input[type="text"],
+.add-product-form input[type="number"] {
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.add-product-form button {
+  padding: 8px 16px;
+}
+
+.order-list {
+  margin-top: 40px;
+}
+
+.order-card {
+  background-color: #edf1d6;
+  color: #272727;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.order-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.order-card p {
+  margin-bottom: 5px;
+}
+
+.order-card .order-details {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-card .order-details span {
+  font-weight: bold;
+}
+
+.order-card .order-details .payment-method {
+  color: #ed5c5c;
+}
