@@ -4,7 +4,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const orderContainer = document.getElementById("orderContainer");
 
   addProductButton.addEventListener("click", () => {
-    addProductForm.style.display = "block";
+    if (addProductForm.style.display === "none") {
+      addProductForm.style.display = "block";
+    } else {
+      addProductForm.style.display = "none";
+    }
   });
 
   addProductForm.addEventListener("submit", (e) => {
@@ -12,7 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const productName = document.getElementById("productNameInput").value;
     const productPrice = document.getElementById("productPriceInput").value;
     const productImage = document.getElementById("productImageInput").value;
-    // Perform your logic to add the product to the backend or data storage
+
+    // logic to add the product to the backend or data storage
 
     // Clear form inputs
     document.getElementById("productNameInput").value = "";
@@ -20,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("productImageInput").value = "";
 
     // Hide the form
+
     addProductForm.style.display = "none";
   });
 

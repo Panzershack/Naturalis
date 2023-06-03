@@ -345,6 +345,7 @@ nav li a:hover {
 #testimonials img {
   height: 400px;
   width: auto;
+  border-radius: 20px;
 }
 
 #testimonials p {

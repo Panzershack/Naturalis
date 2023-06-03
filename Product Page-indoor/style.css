@@ -118,6 +118,7 @@ body {
   font-family: FontAwesome;
   font-size: 20px;
 }
+
 .itembox h3.price {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -135,6 +136,7 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
 /* Navbar styles */
 
 nav {
@@ -175,4 +177,104 @@ nav li a {
 nav li a:hover {
   background-color: #609966;
   color: #edf1d6;
+}
+
+/* Cart Panel styles */
+
+.cart-panel {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 300px;
+  background-color: #edf1d6;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 999;
+  display: none;
+}
+
+.cart-content {
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: "Montserrat", sans-serif;
+  color: #272727;
+}
+
+.cart-content h2 {
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  color: #272727;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart-total h4 {
+  margin: 0;
+}
+
+#clear-cart-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #609966;
+  color: #edf1d6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#clear-cart-button:hover {
+  background-color: #edf1d6;
+  color: #609966;
+}
+
+#buy-now-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #609966;
+  color: #edf1d6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#buy-now-button:hover {
+  background-color: #edf1d6;
+  color: #609966;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 1024px) {
+  .itembox {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .itembox {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .itembox {
+    flex-basis: calc(100% - 20px);
+  }
 }

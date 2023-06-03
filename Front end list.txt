@@ -1,8 +1,0 @@
-1.Main Page
-2.Seller Login
-3.Customer Login
-4.Seller Register
-5.Customer Register
-6.Cart
-7.order page
-8.Product page

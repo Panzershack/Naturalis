@@ -68,6 +68,11 @@ body {
   border-radius: 20px;
 }
 
+textarea {
+  margin-top: 2%;
+  border-radius: 20px;
+}
+
 .add-product-form button {
   padding: 8px 16px;
 }
