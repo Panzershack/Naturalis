@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Panel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../Product Page-indoor/index.html">Indoor Plants</a></li>
+        <li><a href="../Product Page-outdoor/index.html">Outdoor Plants</a></li>
+        <li>
+          <a href="../Product Page-accessories/index.html">Accessories</a>
+        </li>
+        <li><a href="../Base/index.html">Home</a></li>
+        <li><a href="../User Panel/index.html">My Account</a></li>
+        <li><a href="#" id="cart-toggle">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="dashboard">
+        <div class="dashboard-header">
+          <h1>Welcome --username--</h1>
+        </div>
+      </div>
+
+      <div class="order-list">
+        <h2>Your Orders</h2>
+        <div id="orderContainer"></div>
+      </div>
+    </div>
+
+    <!-- Cart Panel -->
+    <div id="cart-panel" class="cart-panel">
+      <div class="cart-content">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <div class="cart-total">
+          <h4>Total:</h4>
+          <span id="cart-total-price">0.00$</span>
+        </div>
+        <button id="buy-now-button">Buy Now</button>
+        <button id="clear-cart-button">Clear Cart</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

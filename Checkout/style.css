@@ -1,0 +1,121 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #edf1d6;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+      rgba(69, 128, 88, 0.8),
+      rgba(69, 128, 88, 0.8)
+    ),
+    url(background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.btn1 {
+  background-color: #edf1d6;
+  color: #7d9b76;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.btn1:hover {
+  background-color: #7d9b76;
+  color: #edf1d6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #272727;
+  border-radius: 20px;
+}
+
+.checkout-container {
+  background-color: #609966;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.checkout-summary {
+  flex: 1;
+  background-color: #edf1d6;
+  color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.checkout-summary h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.checkout-form {
+  flex: 1;
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.checkout-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  max-width: 90px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f3eb;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.radio-group label {
+  margin-left: 5px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}

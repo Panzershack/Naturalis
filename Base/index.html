@@ -45,7 +45,7 @@
     <div class="right">
       <p class="text1">Got a green thumb? We got you</p>
       <p class="text2">Shop for indoor and outdoor plants and accessories</p>
-      <button class="btn2" onclick="redirectToUser()">BUY NOW</button>
+      <button class="btn2" onclick="redirectToIndoor()">BUY NOW</button>
 
     </div>
 
@@ -68,7 +68,7 @@
     <div class="right">
       <p class="text1">Accessories Collection</p>
       <p class="text2">Grow your garden with ease and keep it thriving with our top-quality gardening tools and maintenance essentials</p>
-      <button class="btn2">EXPLORE</button>
+      <button class="btn2" onclick="redirectToAccessories()">EXPLORE</button>
 
     </div>
 
@@ -130,12 +130,18 @@
         });
       });
     });
+    function redirectToIndoor() {
+        window.location.href = "../Product Page-indoor/index.html";
+      }
     function redirectToUser() {
-        window.location.href = "Login-user/index.html";
+        window.location.href = "../User Panel/index.html";
       }
     function redirectToSeller() {
-       window.location.href = "Login-seller/index.html";
+       window.location.href = "../Admin Panel/index.html";
     }
+    function redirectToAccessories() {
+        window.location.href = "../Product Page-Accessories/index.html";
+      }
   </script>
 </body>
 </html>

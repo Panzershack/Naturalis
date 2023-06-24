@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      rgba(69, 128, 88, 0.8),
+      rgba(69, 128, 88, 0.8)
+    ),
+    url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.form-box {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #7d9b76;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.toggler {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  outline: auto;
+  outline-color: #edf1d6;
+}
+
+.toggler-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #272727;
+}
+
+#bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #edf1d6, #edf1d6);
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.form-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #edf1d6;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.inputs {
+  width: 80%;
+  padding: 10px 5%;
+  margin-bottom: 2%;
+  border: 2px solid #7d9b76;
+  outline-color: #7d9b76;
+  border-radius: 20px;
+  transition: 0.5s;
+  background-color: #edf1de;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 110px;
+  font-family: "Montserrat", sans-serif;
+  color: #edf1de;
+  font-weight: bold;
+}
+#register .checkbox-label {
+  margin-left: 30px;
+}
+
+.checkbox-input {
+  margin-right: 5px;
+}
+
+.submit-btn {
+  position: relative;
+  right: 20px;
+  width: 85%;
+  padding: 10px 5px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #457d58;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: #edf1d6;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.submit-btn:hover {
+  background: #edf1d6;
+  color: #272727;
+}
+
+.form-content {
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  transform: translateY(-50%);
+  transition: transform 0.6s ease-in-out;
+  overflow: hidden;
+}
+
+.form-content:not(:first-child) {
+  left: 100%;
+}
+
+.form-content:first-child {
+  left: 0;
+}
+
+.active {
+  left: 0;
+}

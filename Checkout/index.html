@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="checkout-container">
+        <div class="checkout-summary">
+          <h2>Order Summary</h2>
+          <div id="cartItems"></div>
+          <div class="total-price">
+            <p>Total Price:</p>
+            <p id="totalPrice">$0.00</p>
+          </div>
+        </div>
+        <div class="checkout-form">
+          <h2>Checkout</h2>
+          <form id="checkoutForm">
+            <div class="form-group">
+              <label for="emailInput">Email:</label>
+              <input type="email" id="emailInput" required />
+            </div>
+            <div class="form-group">
+              <label for="firstNameInput">First Name:</label>
+              <input type="text" id="firstNameInput" required />
+            </div>
+            <div class="form-group">
+              <label for="lastNameInput">Last Name:</label>
+              <input type="text" id="lastNameInput" required />
+            </div>
+            <div class="form-group">
+              <label for="addressLine1Input">Address Line 1:</label>
+              <input type="text" id="addressLine1Input" required />
+            </div>
+            <div class="form-group">
+              <label for="addressLine2Input">Address Line 2:</label>
+              <input type="text" id="addressLine2Input" />
+            </div>
+            <div class="form-group">
+              <label for="telephoneInput">Telephone:</label>
+              <input type="tel" id="telephoneInput" required />
+            </div>
+            <div class="form-group">
+              <label>Payment Method:</label>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="cashOnDelivery"
+                  name="paymentMethod"
+                  value="cashOnDelivery"
+                  checked
+                />
+                <label for="cashOnDelivery">Cash on Delivery</label>
+              </div>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="cardPayment"
+                  name="paymentMethod"
+                  value="cardPayment"
+                />
+                <label for="cardPayment">Card Payment</label>
+              </div>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="bankTransfer"
+                  name="paymentMethod"
+                  value="bankTransfer"
+                />
+                <label for="bankTransfer">Bank Transfer</label>
+              </div>
+            </div>
+            <button type="submit" class="btn1">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
